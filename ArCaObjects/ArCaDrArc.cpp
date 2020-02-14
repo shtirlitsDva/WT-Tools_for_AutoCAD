@@ -22,6 +22,7 @@ void ArCaDrArc::DoDraw(AcGiWorldDraw *mode)
 	SetEnvironment(mode);
 	mode->geometry().circularArc(_p3dCenter,_dRadios,AcGeVector3d::kZAxis,_VecStart,_dAngle);
 }
+
 void ArCaDrArc::DoExplode(AcDbVoidPtrArray & entitySet)const
 {
 	AcDbArc* pArc = new AcDbArc();
