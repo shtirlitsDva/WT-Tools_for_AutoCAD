@@ -1,0 +1,47 @@
+HKCR
+{
+	ArCaPropertyPalette.ArCaCOMCota.1 = s 'ArCaCOMCota Class'
+	{
+		CLSID = s '{CAFFC4AF-6DE0-4A4E-8018-22331F5635E5}'
+	}
+	ArCaPropertyPalette.ArCaCOMCota = s 'ArCaCOMCota Class'
+	{
+		CLSID = s '{CAFFC4AF-6DE0-4A4E-8018-22331F5635E5}'
+		CurVer = s 'ArCaPropertyPalette.ArCaCOMCota.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CAFFC4AF-6DE0-4A4E-8018-22331F5635E5} = s 'ArCaCOMCota Class'
+		{
+			ProgID = s 'ArCaPropertyPalette.ArCaCOMCota.1'
+			VersionIndependentProgID = s 'ArCaPropertyPalette.ArCaCOMCota'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{3AAD90D1-5BD8-4B1D-8FCF-69F934C29C50}'
+		}
+	}
+}
+
+HKLM
+{
+	NoRemove SOFTWARE
+	{
+		NoRemove Autodesk
+		{
+			NoRemove ObjectDBX
+			{
+				NoRemove R18.0
+				{
+					NoRemove ActiveXCLSID
+					{
+						val ArCaCota = s '{CAFFC4AF-6DE0-4A4E-8018-22331F5635E5}'
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,127 @@
+// (C) Copyright 2002-2007 by Autodesk, Inc. 
+
+// ArCaPropertyPalette.idl : IDL source
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (ArCaArCaPropertyPalette.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+//import "acadi.idl";
+
+[
+	uuid(3AAD90D1-5BD8-4B1D-8FCF-69F934C29C50),
+	version(1.0),
+	helpstring("ArCaArCaPropertyPalette 1.0 Type Library")
+]
+library ArCaArCaPropertyPaletteLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	//----- If the following import fails then it means that the type library 
+	//----- is not on the system path you can fix the problem in two ways:
+	//----- 1. Add it to the system wide PATH environment variable
+	//----- 2. Add it to the executable file list in Developer Studio. You can do
+	//----- this in using the Tools/Option menu and then choosing the 'Directories'
+	//----- tab and finally typing the full path at the Executable files section.
+
+	//----- Importing english is ok here. Autodesk doesn't localize this idl/tlb.
+	//----- axdb16enu.tlb is guaranteed to be available in all locales.
+	//----- If you want to provide localized typelib then you must import
+	//----- localized tlb here.
+	importlib("axdb18enu.tlb");
+
+	// Object Rampa
+	//- Interface definition
+	[
+		object,
+		uuid(AACC3475-497F-47EA-A17D-E27B0C2FF8E9),
+		dual,
+		nonextensible,
+		helpstring("IArCaCOMRampa Interface"),
+		pointer_default(unique)
+	]
+	interface IArCaCOMRampa : IAcadEntity	{
+		[propget, id(1), helpstring("property Height")] HRESULT Height([out, retval] double* pVal);
+		[propput, id(1), helpstring("property Height")] HRESULT Height([in] double newVal);
+		[propget, id(2), helpstring("property Scale")] HRESULT Scale([out, retval] double* pVal);
+		[propput, id(2), helpstring("property Scale")] HRESULT Scale([in] double newVal);
+	};
+	//- Library section of interface IArCaCOMRampa
+	[
+		uuid(1E6B130F-7730-47BE-86D6-131C615DF1FA),
+		helpstring("ArCaCOMRampa Class")
+	]
+	coclass ArCaCOMRampa
+	{
+		[default] interface IArCaCOMRampa;
+		[source] interface IAcadObjectEvents;
+	};
+
+	//Object Grating
+	//- Interface definition
+	[
+		object,
+		uuid(AFC2BF77-1F83-46C5-B3CA-7901EA0E7E37),
+		dual,
+		nonextensible,
+		helpstring("IArCaCOMGrating Interface"),
+		pointer_default(unique)
+	]
+	interface IArCaCOMGrating : IAcadEntity	{
+		[propget, id(1), helpstring("Opening between each grid")] HRESULT dOpening([out, retval] double* pVal);
+		[propput, id(1), helpstring("Opening between each grid")] HRESULT dOpening([in] double newVal);
+		[propget, id(2), helpstring("Grid Thickness")] HRESULT dGridVerThickness([out, retval] double* pVal);
+		[propput, id(2), helpstring("Grid Thickness")] HRESULT dGridVerThickness([in] double newVal);
+		[propget, id(3), helpstring("Grid Thickness")] HRESULT dGridHorThickness([out, retval] double* pVal);
+		[propput, id(3), helpstring("Grid Thickness")] HRESULT dGridHorThickness([in] double newVal);
+		[propget, id(4), helpstring("Quantiy of grids")] HRESULT iGridHorQuantiy([out, retval] int* pVal);
+		[propput, id(4), helpstring("Quantiy of grids")] HRESULT iGridHorQuantiy([in] int newVal);
+		[propget, id(5), helpstring("Type of tip")] HRESULT TypeTipTop([out, retval] BSTR* pVal);
+		[propput, id(5), helpstring("Type of tip")] HRESULT TypeTipTop([in] BSTR newVal);
+		[propget, id(6), helpstring("Type of tip")] HRESULT TypeTipLower([out, retval] BSTR* pVal);
+		[propput, id(6), helpstring("Type of tip")] HRESULT TypeTipLower([in] BSTR newVal);
+	};
+	//- Library section of interface IArCaCOMGrating
+	[
+		uuid(EC60E332-7943-4E2F-BA16-2B0F488728A7),
+		helpstring("ArCaCOMGrating Class")
+	]
+	coclass ArCaCOMGrating
+	{
+		[default] interface IArCaCOMGrating;
+		[source] interface IAcadObjectEvents;
+	};
+	//- Interface definition
+	[
+		object,
+		uuid(C4F43D98-B305-4E86-B7BA-3C5C64718577),
+		dual,
+		nonextensible,
+		helpstring("IArCaCOMCota Interface"),
+		pointer_default(unique)
+	]
+	interface IArCaCOMCota : IAcadEntity	{
+		[propget, id(1), helpstring("Type of quote")] HRESULT Type([out, retval] BSTR* pVal);
+		[propput, id(1), helpstring("Type of quote")] HRESULT Type([in] BSTR newVal);
+
+		[propget, id(2), helpstring("Value of quote")] HRESULT Value([out, retval] double* pVal);
+		[propput, id(2), helpstring("Value of quote")] HRESULT Value([in] double newVal);
+
+		[propget, id(3), helpstring("Scale Factor fo quote")] HRESULT ScaleFactor([out, retval] double* pVal);
+		[propput, id(3), helpstring("Scale Factor fo quote")] HRESULT ScaleFactor([in] double newVal);
+
+		[propget, id(4), helpstring("Enable or Desble Dynamic Quote")] HRESULT DynamicQuote([out, retval] BSTR* pVal);
+		[propput, id(4), helpstring("Enable or Desble Dynamic Quote")] HRESULT DynamicQuote([in] BSTR newVal);
+	};
+	//- Library section of interface IArCaCOMCota
+	[
+		uuid(CAFFC4AF-6DE0-4A4E-8018-22331F5635E5),
+		helpstring("ArCaCOMCota Class")
+	]
+	coclass ArCaCOMCota
+	{
+		[default] interface IArCaCOMCota;
+		[source] interface IAcadObjectEvents;
+	};
+};

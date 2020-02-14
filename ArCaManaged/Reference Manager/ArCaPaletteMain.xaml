@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="ArCaManaged.Reference_Manager.View.ArCaPaletteMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    MinHeight="300" MinWidth="50" HorizontalContentAlignment="Stretch"  VerticalContentAlignment="Stretch" Height="300">
+    <Grid Name="GridMain" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="229.959*" />
+            <RowDefinition Height="40.041" />
+        </Grid.RowDefinitions>
+        <ComboBox Name="cbMain" Margin="6,6,6,0" ItemsSource="{Binding  LstGroup, Mode=OneWay}" SelectedIndex="0">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=Name}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ListView Grid.Row="1" Margin="6,6,6,6" Name="lvBlocks" DataContext="{Binding ElementName=cbMain, Path=SelectedItem}" ItemsSource="{Binding  LstBlock, Mode=OneWay}" MouseDoubleClick="lvBlocks_MouseDoubleClick">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
+                                   ItemWidth="{Binding (ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                   MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
+                                   ItemHeight="{Binding (ListView.View).ItemHeight, RelativeSource={RelativeSource AncestorType=ListView}}" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0.5" Width="100" Height="120" Grid.Row="2">
+                        <Border Margin="2.5" BorderBrush="#FF000000" BorderThickness="1" CornerRadius="8,8,8,8">
+                            <Border.Background>
+                                <SolidColorBrush Opacity="0.5" Color="Lavender"/>
+                            </Border.Background>
+                        </Border>
+                        <Border Background="White" BorderBrush="#FF000000" BorderThickness="0.5" Margin="10,10,10,26" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Image Height="80" Width="80" Margin="0" Name="imgBlock" Stretch="Uniform"  Source="{Binding Path=btmImage}"/>
+                        </Border>
+                        <TextBlock Text="{Binding Path=Name}" Height="23" VerticalAlignment="Bottom" Margin="10,3" />
+                        <Grid.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold" Text="{Binding Path=Name}"/>
+                                    <TextBlock Text="{Binding Path=Description}"/>                                  
+                                </StackPanel>
+                            </ToolTip>
+                        </Grid.ToolTip>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Name="AddBlock" Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,6,5.845" Width="29" Click="AddBlock_Click" ToolTip="Add new block" Height="27.96" VerticalAlignment="Bottom">
+            <Image Source="../Resource/add_32.png"/>
+        </Button>
+        <Button Name="DelBlock" Grid.Row="2" Margin="0,0,40.915,5.805" Click="DelBlock_Click" ToolTip="Delete block" HorizontalAlignment="Right" Width="29.003" Height="28" VerticalAlignment="Bottom">
+            <Image Source="../Resource/close_32.png" />
+        </Button>
+        <Button Name="EdtBlock" Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,75.988,5.805" Width="29" Click="EdtBlock_Click" ToolTip="Edit block" Height="28" VerticalAlignment="Bottom">
+            <Image Source="../Resource/pencil_32.png" />
+        </Button>        
+    </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArCa>
+  <ReferenceManager>
+    <Blocks>
+      <BlockGroup Name="Grupo1">
+        <Block Name="Bloco1" GUID="3d82f956-75d3-46da-9a00-51d2e2a41424"/>
+        <Block Name="Bloco2" GUID="32224cc2-cba1-4b3e-8874-8fc7ceee1afd"/>
+        <Block Name="Bloco3" GUID="d1fc6ff6-972f-4a84-b572-5dadbc8ebe6a"/>
+      </BlockGroup>
+      <BlockGroup Name="Grupo2">
+        <Block Name="G2Bloco1" GUID="672f82e6-bc54-40c6-bf49-dff362c2d7e1"/>
+        <Block Name="G2Bloco2" GUID="b0294964-e85f-4882-b862-5d5cdf1bc073"/>
+        <Block Name="G2Bloco3" GUID="d22bbb40-390b-4d55-9acf-cbd350bf830a"/>
+      </BlockGroup>
+      <BlockGroup Name="Grupo3">
+        <Block Name="G3Bloco1" GUID="3d82f956-75d3-46da-9a00-51d2e2a41424"/>
+        <Block Name="G3Bloco2" GUID="32224cc2-cba1-4b3e-8874-8fc7ceee1afd"/>
+        <Block Name="G3Bloco3" GUID="d1fc6ff6-972f-4a84-b572-5dadbc8ebe6a"/>
+        <Block Name="G3Bloco3" GUID="d22bbb40-390b-4d55-9acf-cbd350bf830a"/>
+      </BlockGroup>
+      <BlockGroup Name="Grupo4">
+        <Block Name="G4Bloco1" GUID="b0294964-e85f-4882-b862-5d5cdf1bc073"/>
+      </BlockGroup>
+      <BlockGroup Name="Grupo5"/>
+    </Blocks>
+  </ReferenceManager>
+</ArCa>
+

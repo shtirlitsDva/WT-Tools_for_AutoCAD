@@ -1,0 +1,32 @@
+﻿<Window x:Class="ArCaManaged.ArCaDWGEditor.ArCaDWGEdRunView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Run Actions" Height="259" Width="386" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Name="MainGrid">
+        <Grid Height="90" Margin="12,12,12,0" VerticalAlignment="Top">
+            <Border Margin="0,2" BorderBrush="#FF000000" BorderThickness="1" CornerRadius="8,8,8,8" Padding="2">
+                <Border.Background>
+                    <SolidColorBrush Opacity="0.5" Color="Lavender"/>
+                </Border.Background>
+            </Border>
+            <Border Background="White" BorderBrush="#FF000000" BorderThickness="0.5" Width="75" Height="75" HorizontalAlignment="Left" Margin="5,8,0,0" VerticalAlignment="Top">
+                <Image Name="imgDWG" Source="{Binding Path=btmImage}" />
+            </Border>
+            <TextBlock Text="{Binding Path=Name}" Margin="130,7,10,0" ToolTip="{Binding Path=Name}" Height="22" VerticalAlignment="Top" />
+            <TextBlock Text="{Binding Path=Date}" Margin="130,27,10,0" ToolTip="{Binding Path=Date}" Height="22" VerticalAlignment="Top" />
+            <TextBlock Text="{Binding Path=Size}" Margin="130,47,10,0" ToolTip="{Binding Path=Size}" Height="22" VerticalAlignment="Top" />
+            <TextBlock Text="{Binding Path=FilePath}" Margin="130,67,10,0" ToolTip="{Binding Path=FilePath}" Height="22" VerticalAlignment="Top" />
+            <Label FontWeight="Bold" Margin="84,2,0,0" HorizontalAlignment="Left" Width="46" Height="26" VerticalAlignment="Top">Name:</Label>
+            <Label FontWeight="Bold" Margin="84,22,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="46">Date:</Label>
+            <Label FontWeight="Bold" Margin="84,42,0,0" HorizontalAlignment="Left" Width="46" Height="26" VerticalAlignment="Top">Size:</Label>
+            <Label FontWeight="Bold" Margin="84,62,0,0" HorizontalAlignment="Left" Width="46" Height="26" VerticalAlignment="Top">Path:</Label>
+        </Grid>
+
+        <GroupBox Header="Process Status" Margin="12,108,12,0" Name="groupBox1" Height="72" VerticalAlignment="Top">
+            <Label Name="label1">
+                <TextBlock TextWrapping="Wrap" Name="tbProcesStatus" Text="{Binding Path=MessageProcess}"/>
+            </Label>
+        </GroupBox>
+        <ProgressBar Height="26" Margin="12,186,12,0" Name="progressBar" VerticalAlignment="Top" />
+    </Grid>
+</Window>

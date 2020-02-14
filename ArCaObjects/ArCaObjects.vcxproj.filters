@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ad8b6511-874a-459d-8330-a7165f52c71a}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;idl;odl</Extensions>
+    </Filter>
+    <Filter Include="Include Files">
+      <UniqueIdentifier>{9555c730-1ae4-484e-b40c-8adf6221b7f7}</UniqueIdentifier>
+      <Extensions>h;hh;hxx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{7c19bc26-822d-452a-a746-2b8f6b1b94b8}</UniqueIdentifier>
+      <Extensions>rc;ico;bmp;cur;jpg;gif</Extensions>
+    </Filter>
+    <Filter Include="Miscellaneous Files">
+      <UniqueIdentifier>{b732fbd2-70e4-49ce-9bbe-89127ad87c93}</UniqueIdentifier>
+      <Extensions>reg;rgs;mak;clw;vsdir;vsz;css;inf;vcproj;csproj</Extensions>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{d29724b8-2951-43b6-bd51-02488ddfccc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Include Files">
+      <UniqueIdentifier>{0c003d32-8ab7-4700-84d6-abb7f7aff297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Resource Files">
+      <UniqueIdentifier>{93043916-e808-48f4-83b8-c5297f7ac684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawer">
+      <UniqueIdentifier>{fce4056b-ced6-45fd-b28e-2179e1c365e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawer\Include Files">
+      <UniqueIdentifier>{56814513-66ee-4951-a463-5b8c13743510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawer\Source Files">
+      <UniqueIdentifier>{47f68230-90ba-43da-8f7d-d779e26ccaa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LCS">
+      <UniqueIdentifier>{0026e982-d06f-4db5-b82d-e473c729f2f0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="acrxEntryPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaCota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDynamicArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaGrating.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaRampa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AcadStr.cpp">
+      <Filter>Utils\Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArxDbgUtils.cpp">
+      <Filter>Utils\Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDrArc.cpp">
+      <Filter>Drawer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDrCircle.cpp">
+      <Filter>Drawer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDrDrawer.cpp">
+      <Filter>Drawer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDrEntity.cpp">
+      <Filter>Drawer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDrLine.cpp">
+      <Filter>Drawer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDrPolygon.cpp">
+      <Filter>Drawer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDrPolyLine.cpp">
+      <Filter>Drawer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaDrText.cpp">
+      <Filter>Drawer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArCaLCS.cpp">
+      <Filter>LCS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArCaCota.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArCaDynamicArea.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArCaGrating.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArCaRampa.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArCaWindow.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AcadStr.h">
+      <Filter>Utils\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArxDbgUtils.h">
+      <Filter>Utils\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArCaDrEntity.h">
+      <Filter>Drawer\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArCaLCS.h">
+      <Filter>LCS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ArCaObjects.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
